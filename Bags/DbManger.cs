@@ -11,7 +11,7 @@ namespace Bags
 {
     class DBManger
     {
-        static string DB_Connection_String = @"Data Source=.\SQLSERVER;Initial Catalog=Bags;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=.\SQLEXPRESS;Initial Catalog=Bags;Integrated Security=True";
         SqlConnection myConnection;
 
         public DBManger()

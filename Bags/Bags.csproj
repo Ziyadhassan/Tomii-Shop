@@ -38,8 +38,15 @@
   <PropertyGroup />
   <PropertyGroup />
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,11 +90,11 @@
     <Compile Include="Buy\Delete_Item_From_Cart.Designer.cs">
       <DependentUpon>Delete_Item_From_Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Installments\Factory\Add_Factory_Order_Installment.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,18 @@
     <Compile Include="Installments\Whole\Still_To_Get_Out_Whole.Designer.cs">
       <DependentUpon>Still_To_Get_Out_Whole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order_Receipt_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Order_Receipt_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Store_Forms\Delete_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,8 +318,8 @@
     <EmbeddedResource Include="Credit_Form.resx">
       <DependentUpon>Credit_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Installments\Factory\Add_Factory_Order_Installment.resx">
       <DependentUpon>Add_Factory_Order_Installment.cs</DependentUpon>
@@ -358,6 +377,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Installments\Whole\Still_To_Get_Out_Whole.resx">
       <DependentUpon>Still_To_Get_Out_Whole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Receipt_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Order_Receipt_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store_Forms\Delete_Form.resx">
       <DependentUpon>Delete_Form.cs</DependentUpon>
@@ -423,6 +449,8 @@
   <ItemGroup>
     <Content Include="1490127537-school-object-study-student14_82095.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

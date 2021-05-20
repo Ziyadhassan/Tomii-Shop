@@ -57,6 +57,7 @@ namespace Bags
             this.Item_tb.Size = new System.Drawing.Size(257, 22);
             this.Item_tb.TabIndex = 1;
             this.Item_tb.TextChanged += new System.EventHandler(this.Item_tb_TextChanged);
+            this.Item_tb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Item_tb_KeyDown);
             // 
             // flowLayoutPanel1
             // 

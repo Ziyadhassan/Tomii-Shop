@@ -118,6 +118,12 @@ namespace Bags
             return db.ExecuteReader(query);
         }
 
+        public Object Get_Last_OrderID()
+        {
+            string query = "Select Max(OrderID) From Order_Items";
+            return db.ExecuteScalar(query);
+        }
+
         public int Delete_Order(int orderid)
         {
             string query = "Delete From Orders " +

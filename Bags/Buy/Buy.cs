@@ -206,5 +206,11 @@ namespace Bags
                 Item_tb.Text = "";
             }
         }
+
+        private void Item_tb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+                Insert_btn_Click(sender, e);
+        }
     }
 }

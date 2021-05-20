@@ -40,7 +40,11 @@ namespace Bags
         private void Buy_btn_Click(object sender, EventArgs e)
         {
             if (controller.Buy_Bag(Data, BarCodes, Total_Price) == 1)
+            {
                 MessageBox.Show("تمت عملية الشراء بنجاح");
+                Receipt receipt = new Receipt(Convert.ToInt32(controller.Get_Last_OrderID()));
+                receipt.Show();
+            }
             else
                 MessageBox.Show("حدث خطأ اثناء عملية الشراء\nالرجاء التواصل مع المصمم فورا");
 

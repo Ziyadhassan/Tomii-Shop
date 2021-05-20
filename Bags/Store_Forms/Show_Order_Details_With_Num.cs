@@ -12,6 +12,7 @@ namespace Bags.Store_Forms
 {
     public partial class Show_Order_Details_With_Num : Form
     {
+        int OrderID;
         public Show_Order_Details_With_Num(DataTable data)
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace Bags.Store_Forms
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ReadOnly = true;
 
+            OrderID = Convert.ToInt32(data.Rows[0][0]);
 
             dataGridView1.Columns["OrderID"].HeaderText = "رقم الأوردر";
             dataGridView1.Columns["BarCode"].HeaderText = "الباركود";
@@ -32,6 +34,12 @@ namespace Bags.Store_Forms
             dataGridView1.Columns["Total_Price"].HeaderText = "الاجمالى";
 
             dataGridView1.Refresh();
+        }
+
+        private void Print_btn_Click(object sender, EventArgs e)
+        {
+            Receipt receipt = new Receipt(OrderID);
+            receipt.Show();
         }
     }
 }

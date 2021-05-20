@@ -37,7 +37,7 @@ namespace Bags.Store_Forms
 
                 if(data == null)
                 {
-                    MessageBox.Show("لا يوجد أوردرات بهذة الرقم");
+                    MessageBox.Show("لا يوجد أوردر بهذة الرقم");
                     return;
                 }
 
